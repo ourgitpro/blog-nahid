@@ -16,11 +16,9 @@ dbConnect();
 //Middleware
 app.use(express.json());
 //cors
-
+app.use(cors());
 // app.use(cors()); // allows all origins
-if ((process.env.NODE_ENV = 'development')) {
-  app.use(cors({ origin: `http://localhost:5000` }));
-}
+
 //Users route
 app.use("/api/users", userRoutes);
 //Post route
@@ -42,5 +40,5 @@ app.listen(port, console.log(`Server is running ${port}`));
     mongoose.connect('mongodb+srv://user:user123456@cluster0.ld9e4.mongodb.net/blog?retryWrites=true&w=majority',()=>{
   console.log("DB Connected")
 });
-app.use(cors());
+
  */
