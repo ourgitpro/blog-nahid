@@ -36,10 +36,11 @@ app.use(notFound);
 app.use(errorHandler);
 
 //server
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5000;
 app.listen(port, console.log(`Server is running ${port}`));
 /*
     mongoose.connect('mongodb+srv://user:user123456@cluster0.ld9e4.mongodb.net/blog?retryWrites=true&w=majority',()=>{
   console.log("DB Connected")
 });
+app.use(cors());
  */
